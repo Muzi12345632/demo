@@ -33,13 +33,14 @@ pipeline {
                 echo 'make publish'
             }
         }
-        post {
-            always {
-                junit '**/target/*.xml'
-            }
-            failure {
-                mail to: muziwandilenko@gmail.com, subject: 'The Pipeline failed :('
-            }
+    }
+    post {
+        always {
+            junit '**/target/*.xml'
+        }
+        failure {
+            mail to: muziwandilenko@gmail.com, subject: 'The Pipeline failed :('
         }
     }
 }
+
