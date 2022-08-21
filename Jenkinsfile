@@ -11,7 +11,7 @@ pipeline {
             steps { 
                 echo 'make' 
                 // saves files to jenkinsfile controller for retrieving later
-                archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
+                // archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
                 echo $CC
                 
             }
