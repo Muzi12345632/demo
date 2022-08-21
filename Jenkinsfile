@@ -34,13 +34,6 @@ pipeline {
             }
         }
     }
-    post {
-        always {
-            junit '**/target/*.xml'
-        }
-        failure {
-            mail to: muziwandilenko@gmail.com, subject: 'The Pipeline failed :('
-        }
-    }
+    
 }
 
